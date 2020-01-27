@@ -394,6 +394,10 @@ public abstract class ACBaseActivity extends AppCompatActivity {
 
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
+
+        if (isFinishing()) {
+            alertDialog.dismiss();
+        }
     }
 
     public void setupTheme(){
